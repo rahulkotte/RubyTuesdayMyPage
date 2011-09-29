@@ -1,0 +1,20 @@
+<html>
+<body>
+<img src="images/JesterHead.jpg" />
+<br>
+<b> Hello !!!!!!!!!!Please leave your comments...</b>
+<form action="/submit-comment" method="post">
+
+    <label for="comment">Comment</label>
+    <textarea rows="2" cols="20" name="comment" id = "comment">   </textarea>
+     <br>
+    <label for="name">Your Name</label>
+    <input name="name" id="name" type="text" value="">
+    <input name="submit" id="submit" value="Submit" type="submit">
+
+</form>
+
+<%=@message%>
+
+</body>
+</html>

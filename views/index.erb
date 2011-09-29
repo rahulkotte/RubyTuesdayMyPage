@@ -1,0 +1,43 @@
+<form action="/submit-comment" method="post" class="contact-form">
+
+    <p class="form-field-row">
+				<span class="label">
+					<label for="comment">Please leave your comments:</label>
+				</span>
+
+				<span class="field">
+					 <textarea rows="2" cols="20" name="comment" id ="comment">   </textarea>
+				</span>
+    </p>
+
+    <p class="form-field-row">
+				<span class="label">
+					<label for="name">Your Name</label>
+				</span>
+
+				<span class="field">
+					<input name="name" id="name" type="text" value="" >
+				</span>
+    </p>
+
+    <p class="form-field-row send">
+        <input name="send-button" id="send-button" value="Submit" type="submit">
+    </p>
+</form>
+
+
+
+<% if !@values.empty? %>
+    <div>
+        <p class="form-field-row">
+				<span class="label">
+					<label for="comments">Comments</label>
+				</span> <br>
+            <b> <%= @values[:comment] %>      </b>
+        </p>
+
+        <p class="form-field-row">
+            By <%= @values[:name] %>
+        </p>
+    </div>
+<% end %>

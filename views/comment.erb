@@ -1,0 +1,16 @@
+<html>
+<body>
+<img src="images/JesterHead.jpg" />
+<br>
+<b> Following are your comments</b>
+<form action="/submit-comment" method="post">
+
+
+    <textarea rows="2" cols="20" name="comment" id = "comment"><%= @values[:comment] %>   </textarea>
+     <br>
+    <label for="name">By</label>
+    <b><%= @values[:name] %></b>
+
+</form>
+</body>
+</html>
